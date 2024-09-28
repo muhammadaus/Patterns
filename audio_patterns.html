@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Patterns</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .audio-box { margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Audio Patterns</h1>
+    <div id="audio-container"></div>
+
+    <script>
+        const audioPatterns = [
+            { name: 'Rhythm', description: 'A repeated pattern of sounds.' },
+            { name: 'Melody', description: 'A sequence of notes that is musically satisfying.' },
+            // ... add more audio patterns as needed
+        ];
+
+        const container = document.getElementById('audio-container');
+        audioPatterns.forEach(pattern => {
+            const audioDiv = document.createElement('div');
+            audioDiv.className = 'audio-box';
+            audioDiv.innerText = `${pattern.name}: ${pattern.description}`;
+            container.appendChild(audioDiv);
+        });
+    </script>
+</body>
+</html>

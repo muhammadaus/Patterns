@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Patterns</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .pattern-box { width: 100px; height: 100px; display: inline-block; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Visual Patterns</h1>
+    <div id="visual-container"></div>
+
+    <script>
+        const visualPatterns = [
+            { name: 'Stripes', color: '#FF0000' },
+            { name: 'Polka Dots', color: '#00FF00' },
+            // ... add more visual patterns as needed
+        ];
+
+        const container = document.getElementById('visual-container');
+        visualPatterns.forEach(pattern => {
+            const patternDiv = document.createElement('div');
+            patternDiv.className = 'pattern-box';
+            patternDiv.style.backgroundColor = pattern.color;
+            patternDiv.title = pattern.name;
+            container.appendChild(patternDiv);
+        });
+    </script>
+</body>
+</html>
