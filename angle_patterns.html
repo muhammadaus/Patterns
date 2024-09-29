@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Angles Sweet Spots</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .angle-box { margin: 10px; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>3D Angles Sweet Spots</h1>
+    <div id="angles-container"></div>
+
+    <script>
+        const angles = [
+            { name: '45°', sweetSpot: 'Optimal for isometric views.' },
+            { name: '90°', sweetSpot: 'Perfect for side views.' },
+            { name: '30°', sweetSpot: 'Commonly used in architectural visualization.' },
+            // ... add more angles as needed
+        ];
+
+        const container = document.getElementById('angles-container');
+        angles.forEach(angle => {
+            const angleDiv = document.createElement('div');
+            angleDiv.className = 'angle-box';
+            angleDiv.innerText = `${angle.name}: ${angle.sweetSpot}`;
+            container.appendChild(angleDiv);
+        });
+    </script>
+</body>
+</html>
